@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <!-- NuGet -->
+    <PropertyGroup>
+        <PackageId>Codebrudi.NiceLibrary</PackageId>
+        <Title>Nice Library</Title>
+        <PackageVersion>0.0.0</PackageVersion>
+        <Authors>Codebrudi</Authors>
+        <Company>Codebrudi</Company>
+        <Description>Fancy stuff in a nice libraray.</Description>
+        <Copyright>Codebrudi $([System.DateTime]::UtcNow.Year)</Copyright>
+        <PackageProjectUrl>https://github.com/codebrudi-de/cheat/cs</PackageProjectUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageTags>Codebrudi;NiceLibrary</PackageTags>
+        <PackageLicenseUrl>https://github.com/codebrudi-de/cheat/blob/main/LICENSE</PackageLicenseUrl>
+        <PackageReadmeFile>readme.md</PackageReadmeFile>
+    </PropertyGroup>
+    <ItemGroup>
+        <None Include="readme.md" Pack="true" PackagePath="\"/>
+    </ItemGroup>
+    <!-- NuGet END -->
+
+</Project>
