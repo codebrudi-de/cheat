@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CUBE</title>
+  <style>
+    .cube {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      transform-style: preserve-3d;
+      transition: transform 1s ease-in-out;
+    }
+    .cube__side {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+    }
+    .cube__side-front {
+      transform: translateZ(100px);
+    }
+    .cube__side-back {
+      transform: rotateY(180deg) translateZ(100px);
+    }
+    .cube__side-left {
+      transform: rotateY(-90deg) translateZ(100px);
+    }
+    .cube__side-right {
+      transform: rotateY(90deg) translateZ(100px);
+    }
+    .cube__side-top {
+      transform: rotateX(-90deg) translateZ(100px);
+    }
+    .cube__side-bottom {
+      transform: rotateX(90deg) translateZ(100px);
+    }
+    
+    .buttons {
+      margin-top: 20px;
+    }
+    button {
+      margin-right: 10px;
+    }
+  </style>
+  <script>
+    function showFront() {
+      document.querySelector('.cube').style.transform = 'translateZ(-100px)';
+    }
+    function showBack() {
+      document.querySelector('.cube').style.transform = 'rotateY(180deg)';
+    }
+    function showLeft() {
+      document.querySelector('.cube').style.transform = 'rotateY(90deg)';
+    }
+    function showRight() {
+      document.querySelector('.cube').style.transform = 'rotateY(-90deg)';
+    }
+    function showTop() {
+      document.querySelector('.cube').style.transform = 'rotateX(90deg)';
+    }
+    function showBottom() {
+      document.querySelector('.cube').style.transform = 'rotateX(-90deg)';
+    }
+  </script>
+</head>
+<body>
+  <div class="cube">
+    <div class="cube__side cube__side-front">
+      Front
+    </div>
+    <div class="cube__side cube__side-back">
+      Back
+    </div>
+    <div class="cube__side cube__side-left">
+      Left
+    </div>
+    <div class="cube__side cube__side-right">
+      Right
+    </div>
+    <div class="cube__side cube__side-top">
+      Top
+    </div>
+    <div class="cube__side cube__side-bottom">
+      Bottom
+    </div>
+  </div>
+
+  <div class="buttons">
+    <button onclick="showFront()">Front</button>
+    <button onclick="showBack()">Back</button>
+    <button onclick="showLeft()">Left</button>
+    <button onclick="showRight()">Right</button>
+    <button onclick="showTop()">Top</button>
+    <button onclick="showBottom()">Bottom</button>
+  </div>
+</body>
+</html>
